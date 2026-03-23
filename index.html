@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Plate Recognition</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card p-4 shadow">
+            <h2 class="text-center mb-2">AI License Plate Recognition</h2>
+            <p class="text-center text-muted mb-4">
+                Upload a vehicle image and the app will locate the plate region, run OCR, and store the result.
+            </p>
+
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label">Upload Vehicle Image</label>
+                    <input type="file" name="vehicle_image" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Detect Number Plate</button>
+            </form>
+
+            <a href="/history" class="btn btn-secondary w-100 mt-3">View History</a>
+        </div>
+    </div>
+</body>
+</html>
